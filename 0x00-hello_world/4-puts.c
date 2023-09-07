@@ -1,7 +1,7 @@
 #include <stdio.h>
 int
 /**
-*print_hello - Prints 
+*print_hello-Prints 
 */
 main(void)
 {
