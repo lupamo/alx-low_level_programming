@@ -1,10 +1,10 @@
 /**
- *main: prints a line using f 
- *return: returns an integer
- */
+ *main-str
+ *Return: integer after executing
+*/
 #include <stdio.h>
 int main(void)
 {
-	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return (0);
+        printf("with proper grammar, but the outcome is a piece of art,\n");
+        return (0);
 }
