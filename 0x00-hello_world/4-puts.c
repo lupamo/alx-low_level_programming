@@ -1,8 +1,7 @@
 #include <stdio.h>
 /**
- * This program demonstrates the use of the puts function
- * to print a message to the console.
- */
+*demonstrates the use 
+*/
 int main(void)
 {
 	/*print message to the console*/
