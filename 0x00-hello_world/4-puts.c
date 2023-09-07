@@ -1,8 +1,8 @@
 #include <stdio.h>
 int
 /**
-*printing hello to the terminal
-*/
+ * my_function - This is a description
+ */
 main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
