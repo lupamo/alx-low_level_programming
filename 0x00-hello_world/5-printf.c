@@ -1,5 +1,5 @@
 /**
- *main- prints a sentence
+ * main: prints a line using f 
  *return: returns an integer
  */
 #include <stdio.h>
