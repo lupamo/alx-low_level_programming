@@ -1,12 +1,11 @@
 #include <stdio.h>
+/**
+ * This program demonstrates the use of the puts function
+ * to print a message to the console.
+ */
 int main(void)
 {
-/**
-* my_function - This is a description
-*/
+
 	puts("\"Programming is like building a multilingual puzzle");
-/**
- * main - This is a return
- */
 	return (0);
 }
