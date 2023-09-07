@@ -1,6 +1,6 @@
 /**
- *main:  prints a sentence
- *Return:  integer zero after executing
+ *main:a sentence
+ *Return: integer after executing
 */
 #include <stdio.h>
 int main(void)
