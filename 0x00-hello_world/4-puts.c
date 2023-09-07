@@ -1,5 +1,5 @@
 /**
- *main:a sentence
+ *main-str
  *Return: integer after executing
 */
 #include <stdio.h>
