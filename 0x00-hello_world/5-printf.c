@@ -1,7 +1,7 @@
 /*
  *
- *main - main prints a sentence
- *Return: zero gets returned after
+ * main - Prints with proper grammar, but the oucome is a piece of art, 
+ * Return: zero after main is executed 
  */
 #include <stdio.h>
 int main(void)
