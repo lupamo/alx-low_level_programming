@@ -1,3 +1,8 @@
+/*
+ *
+ *main - main prints a sentence
+ *Return: zero gets returned after
+ */
 #include <stdio.h>
 int main(void)
 {
