@@ -1,6 +1,6 @@
 /**
  *main:  prints a sentence
- *Returns integer zero after executing
+ *Return:  integer zero after executing
 */
 #include <stdio.h>
 int main(void)
