@@ -1,6 +1,6 @@
 /* 
- * main - Prints with proper grammar, but outcome is a piece of art, 
- * return: retuns a zero value
+ * main - Prints_with_proper_grammar,_ but_outcome_is-a-piece-of-art, 
+ * return: retuns_a_zero value
  */
 #include <stdio.h>
 int main(void)
