@@ -1,6 +1,6 @@
 /* 
- * Return: main return 0 when executed
- * main - prints a str of letters
+ * main - Prints with proper grammar, but outcome is a piece of art, 
+ * return: retuns a zero value
  */
 #include <stdio.h>
 int main(void)
