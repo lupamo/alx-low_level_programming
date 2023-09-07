@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
-*demonstrates the use 
-*/
+ * my_function
+ */
 int main(void)
 {
 	/*print message to the console*/
