@@ -1,7 +1,8 @@
 /**
  *
- * @return indicates successful execution.
- */
+ *main prints a sentence.
+ *Returns integer zero after executing
+*/
 #include <stdio.h>
 int main(void)
 {
