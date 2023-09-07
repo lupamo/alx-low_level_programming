@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <unistd.h>
 /**
  * main -prits a line
  *
@@ -6,10 +6,7 @@
  */
 int main(void)
 {
-	FILE *stderr = stderr;
-	char *message = "and that piece of art is useful" " - Dora Korpar, 2015-10-19";
-	int length = strlen(message);
-	fwrite(message, 1, length, stderr);
-	fputc('\n', stderr);
+	char message[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	write(2, message, sizeof(message) - 1);
 	return (1);
 }
