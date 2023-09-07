@@ -1,7 +1,7 @@
 #include <stdio.h>
 int
 /**
-* printing hello
+*printing hello to the terminal
 */
 main(void)
 {
