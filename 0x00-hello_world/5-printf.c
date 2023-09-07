@@ -1,6 +1,6 @@
 /**
  * main: prints a line using f 
- *return: returns an integer
+ *return- returns an integer
  */
 #include <stdio.h>
 int main(void)
