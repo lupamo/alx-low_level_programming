@@ -1,7 +1,9 @@
-#include <stdio.h>
 /**
- * my_function
+ * This program demonstrates the use of the puts function to print a message to the console.
+ *
+ * @return 0 indicates successful execution.
  */
+#include <stdio.h>
 int main(void)
 {
 	puts("\"Programming is like building a multilingual puzzle");
