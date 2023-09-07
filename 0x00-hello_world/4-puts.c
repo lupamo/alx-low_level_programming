@@ -1,6 +1,5 @@
 /**
- *
- *main prints a sentence.
+ *main:  prints a sentence
  *Returns integer zero after executing
 */
 #include <stdio.h>
