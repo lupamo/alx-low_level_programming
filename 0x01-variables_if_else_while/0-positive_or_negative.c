@@ -5,7 +5,7 @@
 /**
  * main - integer goes in
  *
- * Return: Always 0 (success)
+ * Return: Always return 0 (success)
  */ 
 /* betty style doc for function main goes there */
 int main(void)
@@ -16,15 +16,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if(n > 0)
 	{
-		printf("is positive\n");
+		printf("%d is positive\n", n);
 	}
 	else if(n == 0)
 	{
-		printf("is zero\n");
+		printf("%d is zero\n", n);
 	}
 	else
 	{
-		printf("is negative");
+		printf("%d is negative\n", n);
 	}
 	/* your code goes there */
 	return (0);
