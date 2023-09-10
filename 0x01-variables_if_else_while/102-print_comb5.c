@@ -8,30 +8,22 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i <= 99; i++)
+	for (int i = 0; i < 100; i++)
 	{
-		for (j = i + 1; j <= 99; j++)
+		for (int j = i + 1; j < 100; j++)
 		{
-			if (i != 0 || j != 0)
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(j / 10 + '0');
+			putchar(j % 10 + '0');
+			if (i < 98 || j < 99)
 			{
-				if (i < 10)
-				{
-					putchar('0');
-				}
-				printf("%d ", i);
-				if (j < 10)
-				{
-					putchar('0');
-				}
-				printf("%d", j);
-				if (i != 99 || j != 98)
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
-	putchar('\n');
-	return (0);
+	 putchar('\n');
+	 return (0);
 }
