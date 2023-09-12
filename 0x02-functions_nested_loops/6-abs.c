@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * int _abs - runs an integer
- * @int: input inform of a number
+ * @n: input inform of a number
  * Return - returns 0
  */
 int _abs(int n)
