@@ -7,7 +7,7 @@
 
 int _islower(int c)
 {
-	if (c.islower() == 1)
+	if (c = 'a'&& c <= 'z')
 	{
 		return (1);
 	}
