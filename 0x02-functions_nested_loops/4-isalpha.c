@@ -8,12 +8,9 @@ int _isalpha(int c)
 {
 	int c;
 
-	for (c >= 'a'; c <= 'z'; c++)
+	for (c >= 'a'; c <= 'z'; c++) || (c >= 'A'; c <= 'Z'; c++)
 	{
-		if(c >= 'A'; c <= 'Z'; c++)
-		{
-			return (1);
-		}
+		return (1);
 	}
 	return (0);
 }
