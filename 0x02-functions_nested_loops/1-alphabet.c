@@ -1,8 +1,8 @@
-#include "main.h" 
+#include "main.h"
  /**
- * main - prints alphabet
+ * print_alphabet - prints alphabet
  *
- * Return: 0 after executing
+ * Return: void after executing
  */
 
 void print_alphabet(void)
