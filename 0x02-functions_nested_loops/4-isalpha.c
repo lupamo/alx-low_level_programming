@@ -6,9 +6,7 @@
  */
 int _isalpha(int c)
 {
-	int c;
-
-	for (c >= 'a'; c <= 'z'; c++) || (c >= 'A'; c <= 'Z'; c++)
+	for ((c >= 'a'; c <= 'z'; c++) || (c >= 'A'; c <= 'Z'; c++))
 	{
 		return (1);
 	}
