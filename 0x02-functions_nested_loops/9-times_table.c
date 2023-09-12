@@ -6,14 +6,25 @@
  */
 void times_table(void)
 {
-	int i,j;
+	int i, mult, ans;
 
 	for (i = 0; i <= 9; i++)
 	{
-		for (j = 0; j <= 9; j++)
+		_putchar('0');
+		
+		for (mult = 1; mult <= 9; mult++)
 		{
-			printf("%d, ", i * j);
-			_putchar('\n');
+			_putchar(',');
+			_putchar(' ');
+
+			ans = i * mult;
+
+			if (ans <= 9)
+				_putchar(' ');
+			else
+				_putchar((ans / 10) + '0');
+
+			_putchar((ans % 10) + '0');
 		}
 		_putchar('\n');
 	}
