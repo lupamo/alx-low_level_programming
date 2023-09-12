@@ -4,7 +4,7 @@
  * @int: input inform of a number
  * Return - returns 0
  */
-int _abs(int)
+int _abs(int n)
 {
 	if (int < 0)
 		return (-n);
