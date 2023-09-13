@@ -2,7 +2,7 @@
 /**
  * main - tests if function prints positive or negative
  *
- * Return: 0
+ * Return: after success 0 return
  */
 
 int main(void)
@@ -12,6 +12,5 @@ int main(void)
 	i = 98;
 
 	positive_or_negative(i);
-
 	return (0);
 }
