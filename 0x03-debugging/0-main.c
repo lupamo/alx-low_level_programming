@@ -4,6 +4,7 @@
  * 
  * Return: returns 0 after success executing
  */
+
 int main(void)
 {
 	int i;
