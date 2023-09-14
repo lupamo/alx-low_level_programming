@@ -1,8 +1,7 @@
 #include "main.h"
 /**
- * print_most_numbers - skip 4 and two
- *
- * Return: nothing to return
+ * print_most_numbers - prints most numbers*
+ * Return: returns nothing
  */
 void print_most_numbers(void)
 {
@@ -10,7 +9,7 @@ void print_most_numbers(void)
 
 	for (c = '0'; c <= 9; c++)
 	{
-		if(!(c == '2' || c == '4'))
+		if (!(c == '2' || c == '4'))
 			_putchar(c);
 	}
 	_putchar('\n');
