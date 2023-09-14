@@ -2,7 +2,7 @@
 /**
  * _isupper - checks if a character is upper
  * @c: input character
- * Return: 0 after succes
+ * Return: 1 after success and 0 after failing
  */
 
 int _isupper(int c)
