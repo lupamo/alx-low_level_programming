@@ -1,9 +1,11 @@
 #include "main.h"
+
 /**
  * print_square - prints a square
  * @size: number of columns
  * Return: nothing to return
  */
+
 void print_square(int size)
 {
 	int i, j;
