@@ -3,7 +3,7 @@
 * print_most_numbers - print numbers 0-9, except for 2 and 4
 * Return: nothing
 */
-print_most_numbers(void)
+void iprint_most_numbers(void)
 {
 	char c;
 
