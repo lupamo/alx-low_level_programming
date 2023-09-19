@@ -2,7 +2,7 @@
 /**
  * _atoi - truns a  string to integer
  * @s: string to be integered
- * return: always 0 return
+ * Return: an integer 
  */
 int _atoi(char *s)
 {
