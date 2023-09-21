@@ -24,8 +24,7 @@ char *cap_string(char *str)
 		str[i] == '(' ||
 		str[i] == ')' ||
 		str[i] == '{' ||
-		str[i] == '}' ||
-		i == 0)
+		str[i] == '}' ||)
 		{
 			new_word = 1;
 		}
