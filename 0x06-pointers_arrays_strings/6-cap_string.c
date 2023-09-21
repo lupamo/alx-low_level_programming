@@ -6,36 +6,35 @@
  */
 char *cap_string(char *str)
 {
-	int index = 0;
+	int i = 0;
 	int new_word = 1;
 
-	while (str[index])
+	while (str[i])
 	{
-		char current_char = str[index];
-
 		if (
-		current_char == ' ' ||
-		current_char == '\t' ||
-		current_char == '\n' ||
-		current_char == ',' ||
-		current_char == ';' ||
-		current_char == '.' ||
-		current_char == '!' ||
-		current_char == '?' ||
-		current_char == '"' ||
-		current_char == '(' ||
-		current_char == ')' ||
-		current_char == '{' ||
-		current_char == '}' ||
-		index == 0)
+		str[i] == ' ' ||
+		str[i] == '\t' ||
+		str[i] == '\n' ||
+		str[i] == ',' ||
+		str[i] == ';' ||
+		str[i] == '.' ||
+		str[i] == '!' ||
+		str[i] == '?' ||
+		str[i] == '"' ||
+		str[i] == '(' ||
+		str[i] == ')' ||
+		str[i] == '{' ||
+		str[i] == '}' ||
+		i == 0)
 		{
 			new_word = 1;
 		}
-		else
+		else if (new_word && str[i] >= 'a' && str[i] <= 'z')
 		{
+			str[i] -= 32;
 			new_word = 0;
 		}
-		index++;
+		i++;
 	}
 	return (str);
 }
