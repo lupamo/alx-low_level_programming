@@ -1,50 +1,25 @@
 #include <stdio.h>
 /**
- * leet - encodes a letter
- * str: string tobe encoded
- * Return - returns encoded str
+ * leet - returns encoded str
+ * @str: string tobe encoded
+ * Return: returns encoded str
  */
 char *leet(char *str)
 {
-	int n = 0;
+	int n, k;
 
-	while (str[n])
+	char cap1[] = "aAeEoOtTlL";
+	char cap2[] = "4433007711";
+
+	for (n = 0; str[n] != '\0'; n++)
 	{
-		if(
-		str[n] == 'a' || str[n] == 'A' ||
-		str[n] == 'e' || str[n] == 'E' ||
-		str[n] == 'o' || str[n] == 'O' ||
-		str[n] == 't' || str[n] == 'T' ||
-		str[n] == 'l' || str[n] == 'L')
+		for (k = 0; k < 10; k++)
 		{
-			char replaced = '\0';
-
-			if (str[n] == 'a' || str[n] == 'A')
+			if (str[n] == cap1[k])
 			{
-				replaced = '4';
-			}
-			else if (str[n] == 'e' || str[n] == 'E')
-			{
-				replaced = '3';		
-			}
-			else if (str[n] == 'o' || str[n] == 'O')
-			{
-				replaced = '0';
-			}
-			else if(str[n] == 't' || str[n] == 'T')
-			{
-				replaced = '7';
-			}
-			else if (str[n] == 'l' || str[n] == 'L')
-			{
-				replaced = '1';
-			}
-			if (replaced != '\0')
-			{
-				str[n] = replaced;
+				str[n] = cap2[k];
 			}
 		}
-		n++;
 	}
 	return (str);
 }
