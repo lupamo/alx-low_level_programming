@@ -6,30 +6,37 @@
  */
 char *cap_string(char *s)
 {
-	int word = 0;
+	int word = 1;
 
-	while (!(s[word] >= 'a' && s[word] <= 'z'))
+	while (*s != '\0')
 	{
-		word++;
-	}
-	if (
-	s[word - 1] == ' ' ||
-	s[word - 1] == '\t' ||
-	s[word - 1] == '\n' ||
-	s[word - 1] == ',' ||
-	s[word - 1] == ';' ||
-	s[word - 1] == '.' ||
-	s[word - 1] == '!' ||
-	s[word - 1] == '?' ||
-	s[word - 1] == '"' ||
-	s[word - 1] == '(' ||
-	s[word - 1] == ')' ||
-	s[word - 1] == '{' ||
-	s[word - 1] == '}' ||
-	word == 0)
-	{
-		s[word - 1] -= 32;
-		word++;
+		if (
+		s[word - 1] == ' ' ||
+		s[word - 1] == '\t' ||
+		s[word - 1] == '\n' ||
+		s[word - 1] == ',' ||
+		s[word - 1] == ';' ||
+		s[word - 1] == '.' ||
+		s[word - 1] == '!' ||
+		s[word - 1] == '?' ||
+		s[word - 1] == '"' ||
+		s[word - 1] == '(' ||
+		s[word - 1] == ')' ||
+		s[word - 1] == '{' ||
+		s[word - 1] == '}' ||
+		word == 0)
+		{
+		word = 1;
+		}
+		else
+		{
+			if (word && *s >= 'a' && *s <= 'z')
+			{
+				*s = *s - 32;
+				word = 0;
+			}
+		}
+		s++;
 	}
 	return (s);
 }
