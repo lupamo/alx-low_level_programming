@@ -1,42 +1,38 @@
 #include <stdio.h>
 /**
  * cap_string - all characters to upper
- * @s: string to be uppercased
+ * @str: string to be uppercased
  * Return: uppercased string
  */
-char *cap_string(char *s)
+char *cap_string(char *str)
 {
-	int word = 1;
+	int index = 0;
 
-	while (*s != '\0')
+	while (str[index])
 	{
+		while (!(str[index] >= 'a' && str[index] <= 'z'))
+		{
+			index++;
+		}
 		if (
-		s[word - 1] == ' ' ||
-		s[word - 1] == '\t' ||
-		s[word - 1] == '\n' ||
-		s[word - 1] == ',' ||
-		s[word - 1] == ';' ||
-		s[word - 1] == '.' ||
-		s[word - 1] == '!' ||
-		s[word - 1] == '?' ||
-		s[word - 1] == '"' ||
-		s[word - 1] == '(' ||
-		s[word - 1] == ')' ||
-		s[word - 1] == '{' ||
-		s[word - 1] == '}' ||
-		word == 0)
+		str[index - 1] == ' ' ||
+		str[index - 1] == '\t' ||
+		str[index - 1] == '\n' ||
+		str[index - 1] == ',' ||
+		str[index - 1] == ';' ||
+		str[index - 1] == '.' ||
+		str[index - 1] == '!' ||
+		str[index - 1] == '?' ||
+		str[index - 1] == '"' ||
+		str[index - 1] == '(' ||
+		str[index - 1] == ')' ||
+		str[index - 1] == '{' ||
+		str[index - 1] == '}' ||
+		index == 0)
 		{
-		word = 1;
+			str[index] -= 32;
+			index++;
 		}
-		else
-		{
-			if (word && *s >= 'a' && *s <= 'z')
-			{
-				*s = *s - 32;
-				word = 0;
-			}
-		}
-		s++;
 	}
-	return (s);
+	return (str);
 }
