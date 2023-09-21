@@ -21,7 +21,7 @@ char *leet(char *str)
 
 			if (str[n] == 'a' || str[n] == 'A')
 			{
-				replaaced = '4';
+				replaced = '4';
 			}
 			else if (str[n] == 'e' || str[n] == 'E')
 			{
@@ -37,7 +37,7 @@ char *leet(char *str)
 			}
 			else if (str[n] == 'l' || str[n] == 'L')
 			{
-				reeplaced = '1';
+				replaced = '1';
 			}
 			if (replaced != '\0')
 			{
