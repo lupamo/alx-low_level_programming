@@ -7,25 +7,28 @@
  */
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int i = 0;
+	unsigned int num = 0;
+	int is_checked;
 
-	while (s[i] != '\0')
+	while (*s != '\0')
 	{
-		int checked = 0;
+		is_checked = 0;
 
-		for (unsigned int k = 0; accept[k] != '\0'; k++)
+		while (*accept != '\0')
 		{
-			if (s[i] == accept[k])
+			if (*s == *accept)
 			{
-				checked = 1;
+				is_checked = 1;
 				break;
 			}
+			accept++;
 		}
-		if (!checked)
+		if (is_checked == 0)
 		{
-			break;
+			return (num);
 		}
-		i++;
+		num++;
+		s++;
 	}
-	return (i);
+	return (num);
 }
