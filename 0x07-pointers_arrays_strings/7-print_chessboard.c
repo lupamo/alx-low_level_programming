@@ -17,5 +17,4 @@ void print_chessboard(char (*a)[8])
 		}
 		printf("\n");
 	}
-	return (0);
 }
