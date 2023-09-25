@@ -13,15 +13,16 @@ unsigned int _strspn(char *s, char *accept)
 	while (*s != '\0')
 	{
 		is_checked = 0;
+		char *accept_ptr = accept;
 
-		while (*accept != '\0')
+		while (*accept_ptr != '\0')
 		{
-			if (*s == *accept)
+			if (*s == *accept_ptr)
 			{
 				is_checked = 1;
 				break;
 			}
-			accept++;
+			accept_ptr++;
 		}
 		if (is_checked == 0)
 		{
