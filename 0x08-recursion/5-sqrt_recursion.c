@@ -16,19 +16,12 @@ int _sqrt_recursion(int n)
 	{
 		return (n);
 	}
+	else if (guesser * guesser > n)
+	{
+		return (_sqrt_recursion(n - 1));
+	}
 	else
 	{
-		if (guesser * guesser == n)
-		{
-			return (guesser);
-		}
-		else if (guesser * guesser > n)
-		{
-			return (_sqrt_recursion(n - 1));
-		}
-		else
-		{
-			return (_sqrt_recursion(n + 1));
-		}
+		return (_sqrt_recursion(n + 1));
 	}
 }
