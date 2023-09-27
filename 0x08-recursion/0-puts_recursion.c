@@ -4,13 +4,12 @@
  * @s: the string to be printed
  * return: success nothing
  */
+
 void _puts_recursion(char *s)
 {
 	if (*s != '\0')
 	{
-		putchar ('\n');
-		return;
+		_puts_recursion(s - 1);
+		putchar (*s);
 	}
-	putchar (*s);
-	_puts_recursion(s + 1);
 }
