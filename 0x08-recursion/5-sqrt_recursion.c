@@ -2,26 +2,23 @@
 /**
  * _sqrt_recursion - sets asqrt of a number
  * @n: number to be sqrted
+ * @half: number predicted to be sqrt
  * Return: sqrt after run
  */
-int _sqrt_recursion(int n)
+int _sqrt_recursion(int n, int half)
 {
-	int guesser = n / 2;
+	int full = half * half;
 
-	if (n < 0)
+	if (full == n)
+	{
+		return (half);
+	}
+	else if (full > n || half > n)
 	{
 		return (-1);
 	}
-	else if (n == 0 || n == 1)
-	{
-		return (n);
-	}
-	else if (guesser * guesser > n)
-	{
-		return (_sqrt_recursion(n - 1));
-	}
 	else
 	{
-		return (_sqrt_recursion(n + 1));
+		return (_sqrt_recursion(n, half + 1));
 	}
 }
