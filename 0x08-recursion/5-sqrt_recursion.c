@@ -6,6 +6,8 @@
  */
 int _sqrt_recursion(int n)
 {
+	int guesser = n / 2;
+
 	if (n < 0)
 	{
 		return (-1);
@@ -16,16 +18,17 @@ int _sqrt_recursion(int n)
 	}
 	else
 	{
-		int approx = (n / 2);
-		int next_approx = (approx + n / approx) / 2;
-
-		if (next_approx == approx)
+		if (guesser * guesser == n)
 		{
-			return (approx);
+			return (guesser);
+		}
+		else if (guesser * guesser > n)
+		{
+			return (_sqrt_recursion(n - 1));
 		}
 		else
 		{
-			return (_sqrt_recursion(n));
+			return (_sqrt_recursion(n + 1));
 		}
 	}
 }
