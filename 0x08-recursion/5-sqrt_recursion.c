@@ -17,12 +17,12 @@ int _sqrt_recursion(int n)
 	else
 	{
 		int approx = (n / 2);
-		int next_approx = (approx + (n / approx) / 2);
+		int next_approx = (approx + n / approx) / 2;
 
 		if (next_approx != approx)
 		{
 			approx = next_approx;
-			next_approx = (approx + (n / approx) / 2);
+			next_approx = (approx + n / approx) / 2;
 		}
 		return (approx);
 	}
