@@ -7,11 +7,11 @@
  */
 int is_prime_number(int n, int divise)
 {
-	if (divise * divise > n)
+	if (n == 1)
 	{
-		return (1);
+		return (0);
 	}
-	if (n % divise == 0)
+	if (n % divise <= 0)
 	{
 		return (0);
 	}
