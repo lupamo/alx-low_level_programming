@@ -1,24 +1,47 @@
 #include <stdio.h>
 /**
- * _sqrt_recursion - sets asqrt of a number
- * @n: number to be sqrted
- * @half: number predicted to be sqrt
- * Return: sqrt after run
+ * sqrt_first - first function
+ * @n: first integer
+ * @half: second int to root
+ * Return: sqrt recursed
  */
-int _sqrt_recursion(int n, int half)
+int sqrt_first(int n, int half)
 {
-	int full = half * half;
 
-	if (full == n)
+	if (half % (n / half) == 0)
 	{
-		return (half);
+		if (half * (n / half) == n)
+		{
+			return (half);
+		}
+		else
+		{
+			return (-1);
+		}
+		return (0 + sqrt_first(n, half + 1));
 	}
-	else if (n < 0)
+	/**
+	 * _sqrt_recursion - sets asqrt of a number
+	 * @n: number to be sqrted
+	 * @half: number predicted to be sqrt
+	 * Return: sqrt after run
+	 */
+	int _sqrt_recursion(int n)
 	{
-		return (-1);
+		if (n < 0)
+		{
+			return (-1);
+		}
+
+		if (n == 0)
+		{
+			return (0);
+		}
+		if (n == 1)
+		{
+			return (1);
+		}
+		return (sqrt_first(n, 2));
 	}
-	else
-	{
-		return (_sqrt_recursion(n, half + 1));
-	}
+
 }
