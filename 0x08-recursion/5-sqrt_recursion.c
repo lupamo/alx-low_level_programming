@@ -2,29 +2,29 @@
 /**
  * sqrt_first - first function
  * @n: first integer
- * @half: second int to root
+ * @num: second int to root
  * Return: sqrt recursed
  */
-int sqrt_first(int n, int half)
+int sqrt_first(int n, int num)
 {
+	int product = num * num;
 
-	if (half % (n / half) == 0)
+	if (product == n)
 	{
-		if (half * (n / half) == n)
-		{
-			return (half);
-		}
-		else
-		{
-			return (-1);
-		}
-		return (0 + sqrt_first(n, half + 1));
+		return (num);
+	}
+	else if (product > n || num > n)
+	{
+		return (-1);
+	}
+	else
+	{
+		return (sqrt_first(n, num + 1));
 	}
 }
 /**
  * _sqrt_recursion - sets asqrt of a number
  * @n: number to be sqrted
- * @half: number predicted to be sqrt
  * Return: sqrt after run
  */
 int _sqrt_recursion(int n)
@@ -33,14 +33,12 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	if (n == 0)
+	else if (n == 0 || n == 1)
 	{
-		return (0);
+		return (n);
 	}
-	if (n == 1)
+	else
 	{
-		return (1);
+		return (sqrt_first(n, 1));
 	}
-	return (sqrt_first(n, 2));
 }
-
