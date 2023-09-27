@@ -19,11 +19,13 @@ int _sqrt_recursion(int n)
 		int approx = (n / 2);
 		int next_approx = (approx + n / approx) / 2;
 
-		if (next_approx != approx)
+		if (next_approx == approx)
 		{
-			approx = next_approx;
-			next_approx = (approx + n / approx) / 2;
+			return (approx);
 		}
-		return (approx);
+		else
+		{
+			return (_sqrt_recursion(n));
+		}
 	}
 }
