@@ -8,7 +8,7 @@
  */
 int is_palindrome(char *s, int begin, int end)
 {
-	if (begin > end)
+	if (begin >= end)
 	{
 		return (1);
 	}
