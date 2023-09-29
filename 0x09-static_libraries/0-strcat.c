@@ -1,12 +1,11 @@
 #include <stdio.h>
 /**
- * _strncat - to return concatnated string
- * @dest: firsts string parameter
- * @src: second string parameter
- * @n: number of bytes to be used
- * Return: real_dest
+ * _strcat - function to return two strings
+ * @dest: first string to be appended
+ * @src: second string to be appended
+ * Return: dest to be retrned
  */
-char *_strncat(char *dest, char *src, int n)
+char *_strcat(char *dest, char *src)
 {
 	char *real_dest = dest;
 
@@ -14,12 +13,11 @@ char *_strncat(char *dest, char *src, int n)
 	{
 		dest++;
 	}
-	while (*src != '\0' && n > 0)
+	while (*src != '\0')
 	{
 		*dest = *src;
 		dest++;
 		src++;
-		n--;
 	}
 	*dest = '\0';
 	return (real_dest);
