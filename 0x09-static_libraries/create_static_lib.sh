@@ -1,5 +1,3 @@
 #!/bin/bash
-
-c_files=$(find . -type f -name "*.c")
-ar rcs liball.a $c_files
-exit 0
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c *.c
+ar rc liball.a *.o
