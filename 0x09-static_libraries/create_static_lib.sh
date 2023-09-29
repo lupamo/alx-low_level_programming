@@ -1,4 +1,4 @@
 #!/bin/bash
-for file in *.c; do
-    gcc -c "$file" -o "temp_objs/${file%.c}.o"
-done
+c_files=$(find . -type f -name "*.c")
+ar rcs liball.a $c_files
+exit 0
