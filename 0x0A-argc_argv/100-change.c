@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
 		{
 			balance = balance - 25;
 		}
-		else if (balance - 10 > 0)
+		else if (balance - 10 >= 0)
 		{
 			balance = balance - 5;
 		}
