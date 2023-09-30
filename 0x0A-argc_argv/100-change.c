@@ -25,6 +25,10 @@ int main(int argc, char **argv)
 		}
 		else if (balance - 10 >= 0)
 		{
+			balance = balance - 10;
+		}
+		else if (balance - 5 >= 0)
+		{
 			balance = balance - 5;
 		}
 		else if (balance - 2 >= 0)
