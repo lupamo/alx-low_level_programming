@@ -6,7 +6,7 @@
  * @argv: array of argc
  * Return: 0 affter success
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
 	int count, balance;
 
