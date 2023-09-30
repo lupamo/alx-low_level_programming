@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 /**
  * main - prints the sum of arguments
  * @argc: counts arguments of program
@@ -7,37 +9,32 @@
  */
 int main(int argc, char *argv[])
 {
-	if (argc < 2)
+	int j;
+	unsigned int l, adding = 0;
+	char *argm;
+
+	if (argc > 1)
+	{
+		for (j = 1; j < argc; j++)
+		{
+			argm = argv[j];
+
+			for (l = 0; l < strlen(argm); l++)
+			{
+				if (argm[l] < 48 || argm[l] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			adding += atoi(argm);
+			argm++;
+		}
+		printf("%d\n", adding);
+	}
+	else
 	{
 		printf("0\n");
-		return (0);
 	}
-	int adding = 0;
-	int i;
-
-	for (i = 1; i < argc; i++)
-	{
-		char *arg = argv[i];
-		int num = 0;
-		int j = 0;
-
-		while (arg[j] != '\0')
-		{
-			if (arg[j] < '0' || arg[j] > '9')
-			{
-				printf("Error\n");
-				return (1);
-			}
-			num = num * 10 + (arg[j] - '0');
-			j++;
-		}
-		if (num < 0)
-		{
-			printf("Error\n");
-			return (1);
-		}
-		adding += num;
-	}
-	printf("%d\n", adding);
 	return (0);
 }
