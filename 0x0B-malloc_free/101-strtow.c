@@ -2,45 +2,78 @@
 #include <string.h>
 #include <stdlib.h>
 /**
- * strtow - prints strings into words
- * @str: string to be splited into words
+ * sumup - counts num of word in string
+ * @s: string to check
+ *
+ * Return: 0
+ */
+
+int sumup(char *s)
+{
+	int flag, c, w;
+
+	flag = 0;
+	w = 0;
+
+	for (c = 0; s[c] != '\0'; c++)
+	{
+		if (s[c] == ' ')
+		{
+			flag = 0;
+		}
+		else if (flag == 0)
+		{
+			flag = 1;
+			w++;
+		}
+	}
+	return (w);
+}
+
+/**
+ * strtow - splits words to strin
+ * @str: string to be splited
  * Return: nothing
  */
+
 char **strtow(char *str)
 {
-	int num_word = 0, i = 0, j = 0;
-	char *token;
-	char **words;
+char **sqr, *tmp;
+int i, k = 0, len = 0, words, c = 0, start, end;
 
-	if (str == NULL || *str == '\0')
-	{
-		return (NULL);
-	}
-	token = strtok(str, " ");
-	while (token != NULL)
-	{
-		num_word++;
-		token = strtok(NULL, " ");
-	}
-	words = (char **)malloc((num_word + 1) *  sizeof(char *));
-	if (words == NULL)
-	{
-		return (NULL);
-	}
-	token = strtok(str, " ");
-	for (i = 0; i < num_word; i++)
-	{
-		if (words[i] == NULL)
-		{
-			for (j = 0; j < i; j++)
-			{
-				free(words[j]);
-			}
-			free(words);
-			return (NULL);
-		}
-		token = strtok(NULL, " ");
-	}
-	words[num_word] = NULL;
-	return (words);
+while (*(str + len))
+len++;
+
+words = sumup(str);
+if (words == 0)
+return (NULL);
+
+sqr = (char **) malloc(sizeof(char *) * (words + 1));
+if (sqr == NULL)
+return (NULL);
+
+for (i = 0; i <= len; i++)
+{
+if (str[i] == ' ' || str[i] == '\0')
+{
+if (c)
+{
+end = i;
+tmp = (char *)malloc(sizeof(char) * (c + 1));
+if (tmp == NULL)
+return (NULL);
+
+while (start < end)
+*tmp++ = str[start++];
+*tmp = '\0';
+sqr[k] = tmp - c;
+k++;
+c = 0;
+}
+}
+else if (c++ == 0)
+start = i;
+}
+sqr[k] = NULL;
+return (sqr);
 }
