@@ -27,14 +27,13 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	}
 	weigh = (leng + n) * sizeof(*strcat);
 	strcat = malloc(weigh + 1);
-	if (strcat == NULL)
-	{
+	if (strcat == NULL)	
 		return (NULL);
-	}
 	j = 0;
 	while (j < weigh && s1[j] != '\0')
 	{
 		strcat[j] = s1[j];
+		j++;
 	}
 	i = 0;
 	while (i < weigh && s2[i] != '\0')
