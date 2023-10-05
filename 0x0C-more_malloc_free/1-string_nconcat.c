@@ -10,43 +10,35 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	unsigned int j, leng, i;
-	unsigned int weigh;
-	char *strcat, *nune;
+	char *strcat, *zero;
+	unsigned int i, leng, j;
+	unsigned int size;
 
 	leng = 0;
-	nune = "";
-
+	zero = "";
 	if (s1 == NULL)
-		s1 = nune;
+		s1 = zero;
 	if (s2 == NULL)
-		s2 = nune;
+		s2 = zero;
 	while (s1[leng] != '\0')
-	{
 		leng++;
-	}
-	weigh = (leng + n) * sizeof(*strcat);
-	strcat = malloc(weigh + 1);
+	size = (leng + n) * sizeof(*strcat);
+	strcat = malloc(size + 1);
 	if (strcat == NULL)
 		return (NULL);
-	j = 0;
-	while (j < weigh && s1[j] != '\0')
-	{
-		strcat[j] = s1[j];
-		j++;
-	}
 	i = 0;
-	while (i < weigh && s2[i] != '\0')
+	while (i < size && s1[i] != '\0')
 	{
-		strcat[i] = s2[i];
+		strcat[i] = s1[i];
 		i++;
 	}
-	while (j < weigh && s2[i] != '\0')
+	j = 0;
+	while (i < size && s2[j] != '\0')
 	{
-		strcat[j] = s2[i];
+		strcat[i] = s2[j];
+		i++;
 		j++;
-		i++;
 	}
-	strcat[j] = '\0';
+	strcat[i] = '\0';
 	return (strcat);
 }
