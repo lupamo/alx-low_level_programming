@@ -44,8 +44,8 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	while (j < weigh && s2[i] != '\0')
 	{
 		strcat[j] = s2[i];
-		i++;
 		j++;
+		i++;
 	}
 	strcat[j] = '\0';
 	return (strcat);
