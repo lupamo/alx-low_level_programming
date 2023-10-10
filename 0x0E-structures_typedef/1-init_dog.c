@@ -11,13 +11,10 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d == NULL)
+	while (d != NULL)
 	{
-		return;
+		d->name = name;
+		d->age = age;
+		d->owner = owner;
 	}
-	strncpy(d->name, name, sizeof(d->name) - 1);
-	d->name[sizeof(d->name) - 1] = '\0';
-	d->age = age;
-	strncpy(d->owner, owner, sizeof(d->owner) - 1);
-	d->owner[sizeof(d->owner) - 1] = '\0';
 }
