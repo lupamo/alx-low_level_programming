@@ -1,0 +1,1 @@
+learning functions to pointers
