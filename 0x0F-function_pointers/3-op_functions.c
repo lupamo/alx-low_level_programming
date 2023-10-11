@@ -46,7 +46,7 @@ int op_div(int a, int b)
 	return (a / b);
 }
 /**
- * op_mod: returns reminde after division
+ * op_mod - returns reminde after division
  * @a: first argument
  * @b: second argument
  * Return: modulo of numbers
