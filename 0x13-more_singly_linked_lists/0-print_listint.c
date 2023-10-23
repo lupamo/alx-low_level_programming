@@ -1,9 +1,9 @@
-#include "lists.h"
 #include <stdio.h>
+#include "lists.h"
 /**
  * print_listint - prints the elements in a list
  * @h: list pointer
- * Return: number of nodes in the linked list
+ * Return: number of nodes in a  linked list
  */
 size_t print_listint(const listint_t *h)
 {
