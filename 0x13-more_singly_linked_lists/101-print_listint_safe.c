@@ -22,5 +22,5 @@ size_t print_listint_safe(const listint_t *head)
 			return (1);
 		}
 	}
-	return (1);
+	return (0);
 }
