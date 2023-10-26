@@ -24,7 +24,7 @@ unsigned int binary_to_uint(const char *b)
 		else if (b[i] == '1')
 		{
 			count <<= 1;
-			count != 1;
+			count |= 1;
 		}
 		else
 		{
