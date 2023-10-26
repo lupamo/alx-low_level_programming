@@ -19,12 +19,11 @@ unsigned int binary_to_uint(const char *b)
 	{
 		if (b[i] == '0')
 		{
-			count <<= 1;
+			count = (count << 1);
 		}
 		else if (b[i] == '1')
 		{
-			count <<= 1;
-			count |= 1;
+			count = (count << 1) | 1;
 		}
 		else
 		{
