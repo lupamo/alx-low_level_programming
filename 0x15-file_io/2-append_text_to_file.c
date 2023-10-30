@@ -19,14 +19,14 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
+	if (file_descriptor == -1)
+	{
+		return (-1);
+	}
 	if (text_content)
 	{
 		if (write(file_descriptor, text_content, strlen(text_content)) == -1)
 			return (-1);
-	}
-	if (file_descriptor == -1)
-	{
-		return (-1);
 	}
 	close(file_descriptor);
 	return (0);
