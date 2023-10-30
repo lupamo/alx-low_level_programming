@@ -21,10 +21,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 	if (filename == NULL)
 	{
-		return(0);
+		return (0);
 	}
 	descriptor = open(filename, O_RDONLY, 0600);
-	if(descriptor == -1)
+	if (descriptor == -1)
 	{
 		return (0);
 	}
@@ -33,5 +33,5 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	free(buff);
 	close(descriptor);
 
-	return(byte_read);
+	return (byte_read);
 }
