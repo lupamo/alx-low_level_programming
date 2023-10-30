@@ -13,7 +13,7 @@ int create_file(const char *filename, char *text_content)
 {
 	ssize_t text_len;
 	ssize_t byte_wrote;
-	int file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0700);
+	int file_descriptor = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
 
 	if (filename == NULL)
 	{
