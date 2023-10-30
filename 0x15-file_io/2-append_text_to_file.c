@@ -13,21 +13,16 @@
 int append_text_to_file(const char *filename, char *text_content)
 {
 	int file_descriptor;
-	ssize_t bytes_wrote;
 
 	file_descriptor = open(filename, O_APPEND | O_WRONLY);
 	if (filename == NULL)
 	{
 		return (-1);
 	}
-	if (text_content == NULL)
+	if (text_content)
 	{
-		return (-1);
-	}
-	bytes_wrote = write(file_descriptor, text_content, strlen(text_content));
-	if (bytes_wrote == -1)
-	{
-		close(file_descriptor);
+		if (write(file_descriptor, text_content, strlen(text_content)) == -1)
+			return (-1);
 	}
 	if (file_descriptor == -1)
 	{
