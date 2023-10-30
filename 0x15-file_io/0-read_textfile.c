@@ -10,34 +10,28 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int ad;
+	int descriptor;
 	ssize_t byte_read;
 	char *buff;
 
-	buff = malloc(letters);
-	if (filename == NULL)
-	{
-		return (0);
-	}
-	ad = open(filename, O_RDONLY);
-	if (ad == -1)
-	{
-		return (0);
-	}
+	buff = malloc(sizeof(char *) * letters);
 	if (buff == NULL)
 	{
-		close(ad);
 		return (0);
 	}
-	byte_read = read(ad, buff, letters);
-	if (byte_read == -1 || byte_read != (signed int) letters)
+	if (filename == NULL)
 	{
-		close(ad);
-		free(buff);
+		return(0);
+	}
+	descriptor = open(filename, O_RDONLY, 0600);
+	if(descriptor == -1)
+	{
 		return (0);
 	}
-	write(STDOUT_FILENO, buff, letters);
-	close(ad);
+	byte_read = read(descriptor, buff, letters);
+	write(STDOUT_FILENO, buff, byte_read);
 	free(buff);
-	return (byte_read);
+	close(descriptor);
+
+	return(byte_read);
 }
