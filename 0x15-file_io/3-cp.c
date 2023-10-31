@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-#define BUFFER_SIZE 1024
 
 /**
  * file_append - copies a file to another
@@ -16,7 +15,7 @@ void file_append(const char *fd_from, const char *fd_to)
 	char buff[1024];
 
 	char1 = open(fd_from, O_RDONLY);
-	if (fd_from || char1 == -1)
+	if (!fd_from || char1 == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", fd_from);
 		exit(98);
