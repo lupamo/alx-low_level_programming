@@ -17,6 +17,6 @@ int sum_dlistint(dlistint_t *head)
 	{
 		count += current->n;
 		current = current->next;
-	}	
-	return (count);	
+	}
+	return (count);
 }
