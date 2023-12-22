@@ -23,28 +23,28 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	idx = key_index((const unsigned char *)key, ht->size);
 	current_n = ht->array[idx];
-
 	while (current_n)
 	{
 		if (strcmp(current_n->key, key) == 0)
 		{
 			free(current_n->value);
 			current_n->value = strdup(value);
-			if (current_n->value == 0)
-			{
+			if (current_n->value == NULL)
 				return (0);
-			}
 			return (1);
 		}
 		current_n = current_n->next;
 	}
 	node_new = malloc(sizeof(hash_node_t));
-
 	if (node_new == NULL)
+		return (0);
+	node_new->key = strdup(key);
+	if (node_new->key == NULL)
 	{
+		free(node_new);
 		return (0);
 	}
-	node_new->key = strdup(value);
+	node_new->value = strdup(value);
 	if (node_new->value == NULL)
 	{
 		free(node_new->key);
