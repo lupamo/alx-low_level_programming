@@ -51,7 +51,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(node_new);
 		return (0);
 	}
-	node_new = ht->array[idx];
+	node_new->next = ht->array[idx];
 	ht->array[idx] = node_new;
 	return (1);
 }
