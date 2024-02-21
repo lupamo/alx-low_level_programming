@@ -1,7 +1,5 @@
 #make file with variable defined
 CC = gcc
-SRC := school.c main.c
-school: $(SRC)
-	$(CC) $(SRC) -o school
-
-all:school
+SRC = school.c main.c
+all: ${SRC}
+	${CC} ${SRC} -o school
