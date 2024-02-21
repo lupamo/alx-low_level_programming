@@ -1,0 +1,10 @@
+#all rule should recompile only the updated source files
+CC = gcc
+SRC := school.c main.c
+OBJ := ${SRC:%.C=%.o}
+NAME = school
+
+all: ${NAME}
+	${CC} ${SRC} -o ${NAME}
+%.o: %.c m.h
+	${CC} -c -o $@ $<
