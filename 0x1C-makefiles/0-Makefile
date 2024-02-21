@@ -1,7 +1,3 @@
 # school make file
 school: main.c
-	gcc -o school main.c school.c
-all: school
-clean:
-    rm -f school
-.DEFAULT_GOAL := all
+	gcc -o school main.c
