@@ -1,3 +1,4 @@
 # school make file
 school: main.c
 	gcc -o school main.c
+all: school
