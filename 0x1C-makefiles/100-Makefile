@@ -1,0 +1,21 @@
+#make -f 100-Makefile
+
+CC=gcc
+CFLAGS =-Wall -Werror -Wextra -pedantic
+SRC=school.c main.c
+OBJ=${SRC:%.c=%.o}
+NAME=school
+RM=rm -f
+HEADER = m.h
+
+all: ${HEADER} clean ${NAME}
+
+${NAME}: ${OBJ}
+
+clean:
+	${RM} ${NAME} *~
+oclean:
+	$(RM) *.o
+fclean: clean oclean
+re: ${HEADER} oclean ${OBJ}
+.PHONY: clean oclean $(CC)
